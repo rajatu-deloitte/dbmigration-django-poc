@@ -21,6 +21,12 @@ def calculator(request):
 
             if operation == '+':
                 result = no1 + no2
+            elif operation == '-':
+                result = no1 - no2
+            elif operation == '*':
+                result = no1 * no2
+            elif operation == '/':
+                result = no1 / no2
 
         return JsonResponse({"result": result})
     except ValueError as e:
